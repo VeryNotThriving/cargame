@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h6>enter stuff:</h6>
+    <div>
+        <p id="userchoice-text"></p>
+    </div>
+    <script>
+
+        var userChoiceText = document.getElementById("userchoice-text");
+        document.onkeyup = function(event) {
+            var userGuess = event.key;
+            userChoiceText.textContent = "You chose: " + userGuess;
+
+            
+            var car = {
+
+                make: "Honda",
+                model: "Fit",
+                color: "Blue Raspberry",
+                mileage: 3000,
+                isWorking: true,
+
+                driveToWork: function() {
+
+
+                alert("Old Mileage: " + this.mileage);
+
+                this.mileage = this.mileage + 8;
+
+                alert("New mileage: " + this.mileage);
+                },
+
+                driveAroundWorld: function() {
+
+                alert("Old Mileage: " + this.mileage);
+
+                this.mileage = this.mileage + 24000;
+
+                alert("New Mileage: " + this.mileage);
+                alert("Car needs a tuneup!");
+
+                this.isWorking = false;
+                },
+
+                getTuneUp: function() {
+                alert("Car is ready to go!");
+                this.isWorking = true;
+                },
+
+                honk: function() {
+                alert("Honk! Honk!");
+                }
+            };
+            
+            function reWriteStats(){
+                console.log(car.make);
+                console.log(car.model);
+                console.log(car.color);
+                console.log(car.mileage);
+                console.log(car.isWorking);
+            }
+
+            if (userGuess === 'f') {
+                reWriteStats()
+            }
+
+            if (userGuess === "1"){
+                console.log(car.make);
+            }
+            if (userGuess === "2"){
+                console.log(car.model);
+            }
+            if (userGuess === "3"){
+                console.log(car.color);
+            }
+            if (userGuess === "4"){
+                console.log(car.mileage);
+            }
+            if (userGuess === "5"){
+                console.log(car.isWorking);
+            }
+            
+            
+
+        }
+
+        
+    </script>
+</body>
+</html>
