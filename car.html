@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h6>enter stuff:</h6>
+    <h2>Press 1 for drive for work, 2 for drive around the world, 3 for tune up, 4 for honk, and "f" for car stats</h2>
+    <h3>enter stuff:</h3>
     <div>
         <p id="userchoice-text"></p>
     </div>
@@ -72,16 +73,16 @@
             }
 
             if (userGuess === "1"){
-                console.log(car.make);
+                console.log(car.driveToWork());
             }
             if (userGuess === "2"){
-                console.log(car.model);
+                console.log(car.driveAroundWorld());
             }
             if (userGuess === "3"){
-                console.log(car.color);
+                console.log(car.getTuneUp());
             }
             if (userGuess === "4"){
-                console.log(car.mileage);
+                console.log(car.honk);
             }
             if (userGuess === "5"){
                 console.log(car.isWorking);
